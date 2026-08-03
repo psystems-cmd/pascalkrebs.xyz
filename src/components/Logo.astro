@@ -1,0 +1,12 @@
+---
+interface Props {
+  size?: "sm" | "lg";
+}
+
+const { size = "sm" } = Astro.props;
+const dimensions = size === "lg" ? { width: 57, height: 84 } : { width: 38, height: 56 };
+---
+
+<a href="/" class="block" aria-label="Home">
+  <img src="/logo.svg" alt="𝔓" width={dimensions.width} height={dimensions.height} />
+</a>

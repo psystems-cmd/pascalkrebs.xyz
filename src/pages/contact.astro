@@ -1,0 +1,29 @@
+---
+import SidebarLayout from "../layouts/SidebarLayout.astro";
+
+const links = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/pascal-finn-krebs/" },
+  { label: "Email", href: "mailto:me@pascalkrebs.xyz" },
+  { label: "Instagram", href: "https://www.instagram.com/pascal_finn/" },
+  { label: "GitHub", href: "https://github.com/psystems-cmd" },
+  { label: "X", href: "https://x.com/holiest_grail" },
+];
+---
+
+<SidebarLayout title="Contact — Pascal Krebs" active="contact">
+  <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-6">Don't be a stranger.</h1>
+  <p class="text-grey mb-8">
+    Please feel free to use one of the ways below to get in touch.<br />
+    I'm more than curious to hear what you are cooking.
+  </p>
+  <div class="flex gap-6 flex-wrap">
+    {links.map((link) => (
+      <a
+        href={link.href}
+        class="text-black underline underline-offset-4 hover:text-grey transition-colors"
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
+</SidebarLayout>

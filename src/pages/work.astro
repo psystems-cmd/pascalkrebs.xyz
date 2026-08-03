@@ -1,0 +1,32 @@
+---
+import SidebarLayout from "../layouts/SidebarLayout.astro";
+
+const companies = [
+  "Google",
+  "GlassDollar",
+  "Keboola",
+  "Deloitte",
+  "esome",
+  "Universal Music Group",
+  "Airbus",
+  "Start Global",
+  "Kärcher",
+  "Wempe",
+];
+---
+
+<SidebarLayout title="Work — Pascal Krebs" active="work">
+  <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">Companies I worked for, with, and on.</h1>
+  <p class="text-grey mb-10">
+    This is basically <a href="#" class="text-black underline underline-offset-4">LinkedIn</a>, but without text-limitations and with a lot of context.<br />
+    Feel free to click around and get lost in stories, anecdotes and some nerdism.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {companies.map((name) => (
+      <div class="bg-grey-light rounded-xl flex items-center justify-center aspect-[3/2] p-6">
+        <span class="font-bold text-grey">{name}</span>
+      </div>
+    ))}
+  </div>
+</SidebarLayout>
