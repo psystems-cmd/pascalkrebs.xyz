@@ -16,10 +16,12 @@ const links = [
     Please feel free to use one of the ways below to get in touch.<br />
     I'm more than curious to hear what you are cooking.
   </p>
-  <div class="flex gap-6 flex-wrap">
+  <div class="flex flex-col gap-3 md:flex-row md:gap-6">
     {links.map((link) => (
       <a
         href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
         class="text-black underline underline-offset-4 hover:text-grey transition-colors"
       >
         {link.label}
