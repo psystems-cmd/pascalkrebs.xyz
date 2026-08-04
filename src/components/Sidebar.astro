@@ -2,7 +2,7 @@
 import Logo from "./Logo.astro";
 
 interface Props {
-  active: "my-story" | "projects" | "work" | "contact";
+  active: "my-story" | "projects" | "work" | "reading-list" | "contact";
 }
 
 const { active } = Astro.props;
@@ -11,6 +11,7 @@ const navItems = [
   { label: "My Story", href: "/my-story", id: "my-story" },
   { label: "Projects", href: "/projects", id: "projects" },
   { label: "Work", href: "/work", id: "work" },
+  { label: "Reading List", href: "/reading-list", id: "reading-list" },
   { label: "Contact", href: "/contact", id: "contact" },
 ] as const;
 ---
