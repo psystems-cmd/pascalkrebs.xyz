@@ -1,35 +1,149 @@
 ---
 import SidebarLayout from "../layouts/SidebarLayout.astro";
 
-const companies = [
-  "Google",
-  "GlassDollar",
-  "Keboola",
-  "Deloitte",
-  "esome",
-  "Universal Music Group",
-  "Airbus",
-  "Impossible Founder",
-  "Startup Factory Hamburg",
-  "Start Global",
-  "Kärcher",
-  "Wempe",
-  "Huble Agency",
+const experience = [
+  {
+    company: "Google",
+    role: "Strategic Account Manager",
+    period: "Jul 2025 – Jul 2026",
+    location: "Dublin, Ireland",
+    description: "87 e-commerce accounts, all German-speaking. Growth strategy and strategic planning for global account portfolio including major industrial and automotive clients.",
+  },
+  {
+    company: "GlassDollar",
+    role: "Account Manager, PoCs & Innovation",
+    period: "Jan 2025 – Jun 2025",
+    location: "Germany (hybrid)",
+    description: "Venture clienting: connecting corporates with startup solutions in automotive, energy, and finance. Leading PoC projects from discovery to measurable impact.",
+  },
+  {
+    company: "OBX",
+    role: "Partner",
+    period: "Mar 2024 – Jun 2025",
+    location: "EMEA (hybrid)",
+    description: "Consulting and interim management. Developed sales training programmes.",
+  },
+  {
+    company: "Keboola",
+    role: "Brand & Go-To-Market Lead",
+    period: "Mar 2024 – Nov 2024",
+    location: "Hamburg / London / Prague",
+    description: "Growth, brand, and GTM strategy across European markets. Enabled sales teams, led brand development, engaged C-level clients. Helped position for the $32M Series A.",
+  },
+  {
+    company: "Keboola",
+    role: "Product Management",
+    period: "Dec 2023 – Mar 2024",
+    location: "Hamburg / Prague (hybrid)",
+    description: "Product strategy for Business Data Solutions. R&D, cross-functional collaboration, customer-centric development.",
+  },
+  {
+    company: "Keboola",
+    role: "External Consulting: Fundraising & Positioning",
+    period: "Jun 2023 – Dec 2023",
+    location: "Remote",
+    description: "Consulting on fundraising strategy and market positioning during Series A process.",
+  },
+  {
+    company: "Deloitte",
+    role: "Corporate Innovation Management",
+    period: "Jul 2023 – Nov 2023",
+    location: "Hamburg",
+    description: "Innovation & Ventures | CBI Tech Innovation.",
+  },
+  {
+    company: "Deloitte",
+    role: "Creative Consulting",
+    period: "Sep 2022 – Jul 2023",
+    location: "Hamburg",
+    description: "Communication concepts, branding, strategy, positioning. Data side of Excitement Research on brand touchpoints. Contributed to neuroscience-based brand valuation — commercialisation of \"Excitement Points\" (now Spikes).",
+    link: { href: "/projects/spikes", label: "→ Spikes project" },
+  },
+  {
+    company: "esome",
+    role: "Innovation Management (Working Student)",
+    period: "Jan 2022 – Aug 2022",
+    location: "Hamburg",
+    description: "Innovation in a startup environment focused on social media advertising. Contributing to in-house product development.",
+  },
+  {
+    company: "Huble Agency",
+    role: "Founder & Managing Consultant",
+    period: "Nov 2020 – May 2022",
+    location: "Hamburg",
+    description: "Founded and ran a brand agency. Started with logos, grew into brand building, digital strategy, and bringing US companies to market in Europe.",
+    link: { href: "/projects/huble-agency", label: "→ Full story" },
+  },
+  {
+    company: "Multiversum",
+    role: "Student Assistant, Management Consulting",
+    period: "Nov 2019 – Oct 2020",
+    location: "Hamburg",
+    description: "Pitch decks, retrospectives, Excel macros, PowerBI data visualisation, automation and database projects.",
+  },
+];
+
+const earlyCareer = [
+  { company: "Philips", role: "Marketing Intern", period: "Oct 2017", location: "Hamburg", description: "Marketing department for kitchen appliances." },
+  { company: "Universal Music", role: "Sales & Marketing Intern", period: "Jul 2016", location: "Berlin", description: "Sales & marketing department." },
+  { company: "HellermannTyton", role: "Intern", period: "~2015–2016", location: "Northern Germany", description: "Cable management for industry, automotive, aerospace, maritime. First global business." },
+];
+
+const education = [
+  { school: "CODE University of Applied Sciences", degree: "MSc Technology & Management", period: "2026–2027", note: "" },
+  { school: "Tomorrow University of Applied Sciences", degree: "Impact Degree, GreenTech", period: "", note: "E-mobility, circular economy, battery reuse/repair/recycling." },
+  { school: "Brand University of Applied Sciences", degree: "BA Brand Management", period: "", note: "Grade: 1.2 · Top 10 & Dean's Honours. Focus: Innovation Mgmt. & Marketing Concepts." },
 ];
 ---
 
 <SidebarLayout title="Work — Pascal Krebs" active="work">
   <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">Companies I worked for, with, and on.</h1>
-  <p class="text-grey mb-10">
-    This is basically <a href="https://www.linkedin.com/in/pascal-finn-krebs/" target="_blank" rel="noopener noreferrer" class="text-black underline underline-offset-4">LinkedIn</a>, but without text-limitations and with a lot of context.<br />
-    Feel free to click around and get lost in stories, anecdotes and some nerdism.
+  <p class="text-grey mb-12">
+    This is basically <a href="https://www.linkedin.com/in/pascal-finn-krebs/" target="_blank" rel="noopener noreferrer" class="text-black underline underline-offset-4">LinkedIn</a>, but without text-limitations and with a lot of context.
   </p>
 
-  <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-    {companies.map((name) => (
-      <div class="bg-grey-light rounded-xl flex items-center justify-center aspect-[4/3] md:aspect-[3/2] p-4 md:p-6">
-        <span class="font-bold text-grey text-sm md:text-base text-center">{name}</span>
-      </div>
-    ))}
-  </div>
+  <section class="mb-16">
+    <h2 class="text-xl font-bold mb-8">Experience</h2>
+    <div class="space-y-10">
+      {experience.map((e) => (
+        <div class="border-l-2 border-grey-light pl-5">
+          <p class="text-sm text-grey">{e.period} · {e.location}</p>
+          <h3 class="font-bold mt-1">{e.company}</h3>
+          <p class="text-sm text-grey mt-0.5">{e.role}</p>
+          <p class="mt-2">{e.description}</p>
+          {e.link && (
+            <a href={e.link.href} class="text-sm underline underline-offset-4 mt-2 inline-block">{e.link.label}</a>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-16">
+    <h2 class="text-xl font-bold mb-8">Early Career</h2>
+    <div class="space-y-6">
+      {earlyCareer.map((e) => (
+        <div class="border-l-2 border-grey-light pl-5">
+          <p class="text-sm text-grey">{e.period} · {e.location}</p>
+          <h3 class="font-bold mt-1">{e.company}</h3>
+          <p class="text-sm text-grey mt-0.5">{e.role}</p>
+          <p class="mt-2">{e.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-16">
+    <h2 class="text-xl font-bold mb-8">Education</h2>
+    <div class="space-y-6">
+      {education.map((e) => (
+        <div class="border-l-2 border-grey-light pl-5">
+          {e.period && <p class="text-sm text-grey">{e.period}</p>}
+          <h3 class="font-bold mt-1">{e.school}</h3>
+          <p class="text-sm text-grey mt-0.5">{e.degree}</p>
+          {e.note && <p class="mt-2">{e.note}</p>}
+        </div>
+      ))}
+    </div>
+  </section>
 </SidebarLayout>

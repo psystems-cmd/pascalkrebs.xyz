@@ -1,0 +1,26 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Logo from "../components/Logo.astro";
+
+interface Props {
+  title: string;
+  backHref: string;
+  backLabel: string;
+}
+
+const { title, backHref, backLabel } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <div class="max-w-2xl mx-auto px-5 py-10 md:py-20">
+    <header class="mb-12">
+      <div class="flex items-center gap-6 mb-8">
+        <Logo />
+        <a href={backHref} class="text-sm text-grey hover:text-black transition-colors">← {backLabel}</a>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </div>
+</BaseLayout>
