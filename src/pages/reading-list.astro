@@ -2,15 +2,17 @@
 import SidebarLayout from "../layouts/SidebarLayout.astro";
 
 const books = [
-  { title: "Placeholder", author: "Author", note: "" },
+  { title: "Atlas of AI", author: "Kate Crawford", note: "", url: "https://katecrawford.net/atlas" },
 ];
 
 const articles = [
-  { title: "Placeholder", source: "Source", url: "#", note: "" },
+  { title: "Mean Images", source: "Hito Steyerl · New Left Review 140/141", url: "https://newleftreview.org/issues/ii140/articles/hito-steyerl-mean-images", note: "" },
+  { title: "EU Compute Forecast", source: "Europe 2031", url: "https://europe2031.ai/compute-forecast/", note: "" },
 ];
 
 const papers = [
-  { title: "Placeholder", authors: "Author(s)", url: "#", note: "" },
+  { title: "Excavating AI", authors: "Kate Crawford & Trevor Paglen", url: "https://excavating.ai/", note: "" },
+  { title: "Latent Spaces: AI Art and the Archive", authors: "Maud Ceuterick · October, MIT Press", url: "https://direct.mit.edu/octo/article/doi/10.1162/OCTO.a.545/137249/Latent-Spaces-AI-Art-and-the-Archive", note: "" },
 ];
 ---
 
@@ -23,7 +25,11 @@ const papers = [
     <div class="space-y-4">
       {books.map((b) => (
         <div class="border-l-2 border-grey-light pl-5">
-          <p class="font-bold">{b.title}</p>
+          {b.url ? (
+            <a href={b.url} target="_blank" rel="noopener noreferrer" class="font-bold underline underline-offset-4">{b.title}</a>
+          ) : (
+            <p class="font-bold">{b.title}</p>
+          )}
           <p class="text-sm text-grey">{b.author}</p>
           {b.note && <p class="mt-1 text-sm">{b.note}</p>}
         </div>
