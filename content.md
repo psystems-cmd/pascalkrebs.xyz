@@ -57,17 +57,9 @@ Venture clienting: connecting corporates with startup solutions in automotive, e
 Mar 2024 – Jun 2025 · EMEA (hybrid)
 Consulting and interim management. Developed sales training programmes. Family company.
 
-**Keboola** — Brand & Go-To-Market Lead
-Mar 2024 – Nov 2024 · Hamburg / London / Prague
-Growth, brand, and GTM strategy across European markets. Enabled sales teams, led brand development, engaged C-level clients. Helped position for the $32M Series A (raised in 2023 during external consulting phase).
-
-**Keboola** — Product Management
-Dec 2023 – Mar 2024 · Hamburg / Prague (hybrid)
-Product strategy for Business Data Solutions. R&D, cross-functional collaboration, customer-centric development.
-
-**Keboola** — External Consulting: Fundraising and Positioning
-Jun 2023 – Dec 2023 · Remote
-Consulting on fundraising strategy and market positioning during Series A process.
+**Keboola** — Founders Associate (Brand, GTM, Product Marketing)
+Jun 2023 – Nov 2024 · Hamburg / London / Prague
+Worked directly with the founding team across fundraising, product strategy, and go-to-market. Helped position for the $32M Series A, led brand and GTM strategy across European markets, and shaped product direction for Business Data Solutions.
 
 **Deloitte** — Corporate Innovation Management
 Jul 2023 – Nov 2023 · Hamburg
